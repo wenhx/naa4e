@@ -1,0 +1,47 @@
+﻿@page
+@model IBuyStuff.Server.Pages.FakePaymentModel
+@{
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fake Bank : Payment Gateway</title>
+    <script src="~/Bundles/Core"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        console.log('ready');
+        setTimeout(doneWithPayment, 3000);
+    });
+    function doneWithPayment() {
+        console.log('doneWithPayment');
+        var transactionId = getFakeTransactionId();
+        var baseUrl = "@Url.Content("~/")";
+        window.location.href = baseUrl + "order/endcheckout?tid=" + transactionId;
+    }
+    function getFakeTransactionId() {
+        var transaction = "000";
+        for (var i = 0; i < 12; i++) {
+            transaction += Math.floor((Math.random() * 10) + 1);
+        }
+        return transaction;
+    }
+</script>
+<body>
+    <h1>Welcome to FAKE-BANK</h1>
+    <hr />
+    <form id="form1">
+        <div style="text-align: center;">
+            <h3>We're taking <b>a bit of money</b> out of your pocket ... </h3>
+            <p>
+                Don't worry about your sensitive data. We're using HTTPS here not to
+                make your heart bleeding :)
+            </p>
+
+            <img alt="" src="@Url.Content("~/Content/Images/Main/processing.gif")" />
+        </div>
+    </form>
+</body>
+</html>
