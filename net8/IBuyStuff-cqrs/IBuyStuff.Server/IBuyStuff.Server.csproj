@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\Fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\Content\Fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\Content\Fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\Content\Fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\Content\Images\Main\esposito.png" />
+    <None Include="wwwroot\Content\Images\Main\facebook.png" />
+    <None Include="wwwroot\Content\Images\Main\female.png" />
+    <None Include="wwwroot\Content\Images\Main\google.png" />
+    <None Include="wwwroot\Content\Images\Main\ibuystuff-xl.png" />
+    <None Include="wwwroot\Content\Images\Main\ibuystuff-xs.png" />
+    <None Include="wwwroot\Content\Images\Main\ibuystuff.png" />
+    <None Include="wwwroot\Content\Images\Main\linkedin.png" />
+    <None Include="wwwroot\Content\Images\Main\male.png" />
+    <None Include="wwwroot\Content\Images\Main\ms.png" />
+    <None Include="wwwroot\Content\Images\Main\processing.gif" />
+    <None Include="wwwroot\Content\Images\Main\saltarello.png" />
+    <None Include="wwwroot\Content\Images\Main\twitter.png" />
+    <None Include="wwwroot\Content\Images\Main\wordpress.png" />
+    <None Include="wwwroot\Content\Images\Products\0.png" />
+    <None Include="wwwroot\Content\Images\Products\1.png" />
+    <None Include="wwwroot\Content\Images\Products\10.png" />
+    <None Include="wwwroot\Content\Images\Products\2.png" />
+    <None Include="wwwroot\Content\Images\Products\3.png" />
+    <None Include="wwwroot\Content\Images\Products\4.png" />
+    <None Include="wwwroot\Content\Images\Products\5.png" />
+    <None Include="wwwroot\Content\Images\Products\6.png" />
+    <None Include="wwwroot\Content\Images\Products\7.png" />
+    <None Include="wwwroot\Content\Images\Products\8.png" />
+    <None Include="wwwroot\Content\Images\Products\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.405" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IBuyStuff.Application\IBuyStuff.Application.csproj" />
+  </ItemGroup>
+
+</Project>
